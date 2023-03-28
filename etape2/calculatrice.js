@@ -11,6 +11,12 @@ class Calculator {
     clearInput() {
         this.input.value = "";
     }
+
+    clearLastInput() {
+        let currentInput = this.input.value;
+        let newInput = currentInput.slice(0, -1);
+        this.input.value = newInput;
+    }
   
     computeResult() {
         var input = this.input.value;
